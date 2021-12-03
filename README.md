@@ -1,10 +1,10 @@
 # Student Management
 
-# Steps to browse the project:
+## Steps to browse the project:
 
 ### First you clone or download this project from here.
 ```
-git clone https://github.com/shivam-singh-au17/hackathon_App.git
+git clone https://github.com/shivam-singh-au17/CreateStudentManagement.git
 ```
 ### And then open it in VS Code and then start two Git Bash terminal at the same location. Then enter these two commands manually in first terminal.  
 ```
