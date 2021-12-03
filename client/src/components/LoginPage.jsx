@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { LoginContext } from "./LoginContext";
 
 const iniState = {
   userUserEmail: "",
@@ -6,6 +7,7 @@ const iniState = {
 };
 
 const LoginPage = () => {
+  const { roleHandler } = useContext(LoginContext);
   const [helpData, setHelpData] = useState(iniState);
 
   const handleChang = (e) => {
@@ -17,6 +19,8 @@ const LoginPage = () => {
     setHelpData(myAllUserData);
   };
 
+  const { userUserEmail, userPassword } = helpData;
+
   const submitHelpPopup = (e) => {
     e.preventDefault();
     fetch("http://localhost:5000/login", {
@@ -26,11 +30,10 @@ const LoginPage = () => {
         "Content-Type": "application/json",
       },
     });
+    roleHandler(userUserEmail);
     setHelpData(iniState);
     alert("Submited");
   };
-
-  const { userUserEmail, userPassword } = helpData;
 
   return (
     <div className="container mt-5">
