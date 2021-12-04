@@ -4,14 +4,17 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { LoginContextProvider } from './components/LoginContext';
+import { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.render(
   <React.StrictMode>
-    <LoginContextProvider>
-      <App />
-    </LoginContextProvider>
+    <BrowserRouter>
+      <LoginContextProvider>
+        <App />
+      </LoginContextProvider>
+    </BrowserRouter>
   </React.StrictMode>,
-  document.getElementById( 'root' )
+  document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function
