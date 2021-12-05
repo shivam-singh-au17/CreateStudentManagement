@@ -32,8 +32,7 @@ npm start
 - We used  [HTML-5](https://www.w3schools.com/html/) ,  [CSS-3](https://www.w3schools.com/css/default.asp), [Javascript](https://www.w3schools.com/js/default.asp)  and  [React](https://reactjs.org/docs/getting-started.html)  for front-end.
 - We used  [MongoDB](https://www.mongodb.com/cloud/atlas)  for database.
 - We used  [Node.js](https://nodejs.org/en/)  and  [Express.js](https://expressjs.com/)  library for back end.
-- We used [speech-recognition]() for voice-recognition and voice-typing.
-- And we are also used  [Bootstrap](https://getbootstrap.com/) and [Material UI](https://mui.com/) for designing and layout.
+- And we are also used  [Bootstrap](https://getbootstrap.com/) for designing and layout.
 
 # Tools
 
