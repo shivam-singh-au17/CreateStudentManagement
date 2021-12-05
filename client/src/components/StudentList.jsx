@@ -1,18 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import axios from "axios";
 
-const StudentList = () => {
-  const [getStudent, setGetStudent] = useState([]);
-
-  function getTheStudent() {
-    axios.get(`http://localhost:5000/student/`).then((res) => {
-      setGetStudent(res.data.data);
-    });
-  }
-
+const StudentList = ({ getTheStudent, getStudent, setGetStudent }) => {
   useEffect(() => {
     getTheStudent();
-  }, []);
+  }, [getTheStudent]);
 
   const SortByAge = () => {
     const updatedData = getStudent.sort((a, b) => {
@@ -38,13 +30,10 @@ const StudentList = () => {
 
   const handleDelete = (id) => {
     axios.delete(`http://localhost:5000/student/${id}`).then((res) => {
-        getTheStudent();
+      getTheStudent();
     });
-  
   };
 
-
-    
   return (
     <div className="container my-5">
       <h1 className="text-center my-5">

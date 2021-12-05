@@ -9,7 +9,7 @@ import { LoginContext } from './components/LoginContext';
 
 function App() {
   const { role } = useContext( LoginContext );
-  console.log( 'role:', role )
+
   return (
     <div className="App">
       { role === "admin" ? <>

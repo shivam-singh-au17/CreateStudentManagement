@@ -9,7 +9,7 @@ const iniState = {
   contact: "",
 };
 
-const AddStudent = () => {
+const AddStudent = ({ getTheStudent }) => {
   const [studentData, setStudentData] = useState(iniState);
 
   const handleChange = (e) => {
@@ -32,6 +32,7 @@ const AddStudent = () => {
     });
     setStudentData(iniState);
     alert("Submited");
+    getTheStudent();
   };
 
   const { name, city, age, education, gender, contact } = studentData;
