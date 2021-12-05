@@ -4,6 +4,7 @@ import AllConttestList from './components/AllConttestList';
 import AdminPannel from './components/AdminPannel';
 import LoginPage from './components/LoginPage';
 import Navbar from './components/Navbar';
+import UserNavbar from './components/UserNavbar';
 import { LoginContext } from './components/LoginContext';
 
 
@@ -13,7 +14,7 @@ function App() {
   return (
     <div className="App">
       { role === "admin" ? <>
-        <AdminPannel /></> : role === "user" ? <> <Navbar /> <AllConttestList /></> : <><Navbar /> <LoginPage /> </> }
+        <AdminPannel /></> : role === "user" ? <> <UserNavbar /> <AllConttestList /></> : <><Navbar /> <LoginPage /> </> }
     </div>
   );
 }

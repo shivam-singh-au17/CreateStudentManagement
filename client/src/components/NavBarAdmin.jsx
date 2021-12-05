@@ -1,15 +1,16 @@
 import React from "react";
 import AddContests from "./AddContests";
 import AddStudent from "./AddStudent";
+import { Link } from "react-router-dom";
 
 export const NavBarAdmin = ({ getTheStudent }) => {
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container-fluid">
-          <a className="navbar-brand" href="/">
-            Navbar
-          </a>
+          <Link className="navbar-brand" to="/">
+            LOGO
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -44,6 +45,11 @@ export const NavBarAdmin = ({ getTheStudent }) => {
                   Add_Contests
                 </span>
                 <AddContests />
+              </li>
+              <li className="nav-item">
+                <a className="nav-link active" aria-current="page" href="/">
+                  LogOut
+                </a>
               </li>
             </ul>
             <form className="d-flex">

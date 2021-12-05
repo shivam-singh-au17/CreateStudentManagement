@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import { NavBarAdmin } from "./NavBarAdmin";
 import StudentList from "./StudentList";
 import axios from "axios";
@@ -6,11 +6,11 @@ import axios from "axios";
 const AdminPannel = () => {
   const [getStudent, setGetStudent] = useState([]);
 
-  function getTheStudent() {
+  const getTheStudent = useCallback(() => {
     axios.get(`http://localhost:5000/student/`).then((res) => {
       setGetStudent(res.data.data);
     });
-  }
+  }, []);
   return (
     <div>
       <NavBarAdmin getTheStudent={getTheStudent} />
