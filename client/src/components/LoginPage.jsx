@@ -70,7 +70,7 @@ const LoginPage = () => {
               name="userPassword"
               value={userPassword}
               onChange={handleChang}
-              type="email"
+              type="password"
               className="form-control"
               id="myInput2"
               placeholder="Enter Password"
