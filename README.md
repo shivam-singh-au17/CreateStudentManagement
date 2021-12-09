@@ -43,5 +43,3 @@ npm start
 
 -  [Slack](https://slack.com/intl/en-in/) for communication.
 -  [Zoom](https://zoom.us/) for show work.
-
-
